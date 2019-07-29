@@ -61,6 +61,13 @@ if [ "$KEYCLOAK_IMPORT" ]; then
     SYS_PROPS+=" -Dkeycloak.import=$KEYCLOAK_IMPORT"
 fi
 
+################
+# Realm import #
+################
+if [ "$KEYCLOAK_PREVIEW" ]; then
+    SYS_PROPS+=" -Dkeycloak.profile=preview"
+fi
+
 ########################
 # JGroups bind options #
 ########################
